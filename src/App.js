@@ -62,7 +62,7 @@ const App = () => {
                   : "bg-gray-700 text-gray-300 hover:bg-accentTeal hover:text-white h-10 text-xs"
                 }`}
             >
-              My {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section !== "about" ? "My " : ""}{section.charAt(0).toUpperCase() + section.slice(1)}{section === "about" && " Me"}
             </a>
           );
         })}
