@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Build output
+build/
+
+# System files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Coverage reports
+coverage/
+
+# Miscellaneous
+*.swp
+*.swo
