@@ -1,6 +1,7 @@
 import GitHubIcon from "../icons/github";
 import LinkedInIcon from "../icons/linkedin";
 import MailIcon from "../icons/mail";
+import pic from '../icons/pic.png';
 
 const About = () => {
 	return (
@@ -43,11 +44,11 @@ const About = () => {
 							</div>
 						</div>
 					</div>
-					<div className="flex-1 flex justify-center items-center bg-gray-900 p-8">
+					<div className="flex-1 flex justify-center items-center bg-gray-900">
 						<img
-							src="/path/to/your/image.jpg"
+							src={pic}
 							alt="About"
-							className="object-cover w-64 h-64 rounded-xl shadow-lg"
+							className="object-cover w-full h-full shadow-lg"
 						/>
 					</div>
 				</div>
