@@ -1,10 +1,35 @@
+import { useState, useEffect } from 'react';
 import About from './sections/about';
 import Projects from './sections/projects';
 import Experiences from './sections/experiences';
 
-const sections = ["about", "projects", "experience"];
+const sections = ["about", "projects", "experiences"];
 
 const App = () => {
+    const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const observers = [];
+
+    sections.forEach((section) => {
+      const el = document.getElementById(section);
+      if (el) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setActiveSection(section);
+            }
+          },
+          { root: null, rootMargin: "0px", threshold: 0.6 } // 60% visible
+        );
+        observer.observe(el);
+        observers.push(observer);
+      }
+    });
+
+    return () => observers.forEach((observer) => observer.disconnect());
+  }, [sections]);
+
   const handleScroll = (e, id) => {
     e.preventDefault();
     const section = document.querySelector(id);
@@ -20,17 +45,29 @@ const App = () => {
         <About />
         <Projects />
         <Experiences />
-
       </div>
 
-      {/* Sidebar Navigation */}
-      <nav className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white w-16 flex flex-col items-center py-4 space-y-4">
-        {
-          sections.map((section) => (
-            <a key={section} href={`#${section}`} onClick={(e) => handleScroll(e, `#${section}`)} className="w-10 h-10 bg-accentYellow rounded-full flex items-center justify-center hover:bg-accentTeal">{section.charAt(0).toUpperCase()}</a>
-          ))
-        }
+      {/* Floating Sidebar Navigation */}
+      <nav className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-transparent w-32 flex flex-col items-center py-4 z-50">
+        {sections.map((section) => {
+          const isActive = activeSection === section;
+          return (
+            <a
+              key={section}
+              href={`#${section}`}
+              onClick={(e) => handleScroll(e, `#${section}`)}
+              className={`w-full flex items-center justify-center transition-all duration-200
+          ${isActive
+                  ? "bg-accentTeal text-white font-bold h-12 text-sm"
+                  : "bg-gray-700 text-gray-300 hover:bg-accentTeal hover:text-white h-10 text-xs"
+                }`}
+            >
+              My {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          );
+        })}
       </nav>
+
     </div>
   );
 }

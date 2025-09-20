@@ -6,7 +6,7 @@ const experiencesData = [
 		role: "Research Assistant",
 		company: "NJIT's Intelligible Information Visualization lab",
 		contribution:
-			"Researching data visualization, semantic clarity, and interpretability. My work focuses on how visual and textual representations (such as charts and captions) can be designed and analyzed to more effectively communicate scientific evidence to diverse audiences.",
+			"Advised by Dr. Aritra Dasgupta. Researching data visualization, semantic clarity, and interpretability. My work focuses on how visual and textual representations (such as charts and captions) can be designed and analyzed to more effectively communicate scientific evidence to diverse audiences.",
 	},
 	{
 		year: "2022 - 2024",
@@ -43,10 +43,10 @@ const timelineData = {
 const Experiences = () => {
 	return (
 		<section
-			id="experience"
+			id="experiences"
 			className="flex flex-col p-8 bg-background snap-start h-screen items-center justify-center"
 		>
-			<h2 className="text-5xl font-sans text-textPrimary font-bold mb-2">Experience</h2>
+			<h2 className="text-5xl text-textPrimary font-bold mb-2">Experiences</h2>
 			<div className="flex flex-col w-full mx-auto pt-12">
 				{Object.keys(timelineData).sort((a, b) => b - a).map((year, idx) => {
 					const exps = timelineData[year];
