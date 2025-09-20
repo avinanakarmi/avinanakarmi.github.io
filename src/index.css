@@ -5,7 +5,7 @@
 
 /* Custom styles */
 body {
-  font-family: theme('fontFamily.sans');
+  @apply font-sans;
   background-color: theme('colors.background');
   color: theme('colors.textPrimary');
   margin: 0;

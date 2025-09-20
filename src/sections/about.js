@@ -8,7 +8,7 @@ const About = () => {
 			<div className="container mx-auto flex justify-center items-center h-full">
 				<div className="bg-cardBackground rounded-2xl shadow-2xl flex flex-col md:flex-row h-full w-full max-w-6xl overflow-hidden">
 					<div className="flex-1 flex flex-col justify-center items-start p-8">
-						<h2 className="text-4xl font-sans text-textPrimary font-bold mb-2 tracking-wider">Avina Nakarmi.</h2>
+						<h2 className="text-4xl text-textPrimary font-bold mb-2 tracking-wider">Avina Nakarmi.</h2>
 						<p className="my-4 text-lg text-textSecondary text-justify leading-relaxed">
 							I am a PhD student in Data Science at the New Jersey Institute of Technology with a background in Computer Science and experience as a software engineer. My research focuses on data visualization, semantic clarity, and interpretability, especially how charts and captions communicate scientific evidence. I study how design choices shape understanding to make complex data clearer and easier to share with wider audiences.
 						</p>
