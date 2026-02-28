@@ -1,26 +1,32 @@
 import { useState, useEffect } from 'react';
 import About from './sections/about';
-import Projects from './sections/projects';
+import Education from './sections/education';
+import Skills from './sections/skills';
 import Experiences from './sections/experiences';
 
-const sections = ["about", "projects", "experiences"];
+const navItems = [
+  { id: "about", label: "About" },
+  { id: "education", label: "Education" },
+  { id: "skills", label: "Skills" },
+  { id: "experiences", label: "Experience" },
+];
 
 const App = () => {
-    const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
     const observers = [];
 
-    sections.forEach((section) => {
-      const el = document.getElementById(section);
+    navItems.forEach(({ id }) => {
+      const el = document.getElementById(id);
       if (el) {
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {
-              setActiveSection(section);
+              setActiveSection(id);
             }
           },
-          { root: null, rootMargin: "0px", threshold: 0.6 } // 60% visible
+          { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 }
         );
         observer.observe(el);
         observers.push(observer);
@@ -28,46 +34,55 @@ const App = () => {
     });
 
     return () => observers.forEach((observer) => observer.disconnect());
-  }, [sections]);
+  }, []);
 
   const handleScroll = (e, id) => {
     e.preventDefault();
-    const section = document.querySelector(id);
+    const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth', duration: 10 });
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="App snap-y snap-mandatory h-screen overflow-scroll flex bg-background text-textPrimary">
-      {/* Main Content */}
-      <div className="flex-1">
-        <About />
-        <Projects />
-        <Experiences />
-      </div>
-
-      {/* Floating Sidebar Navigation */}
-      <nav className="fixed top-1/2 right-0 transform -translate-y-1/2 bg-transparent w-32 flex flex-col items-center py-4 z-50">
-        {sections.map((section) => {
-          const isActive = activeSection === section;
-          return (
-            <a
-              key={section}
-              href={`#${section}`}
-              onClick={(e) => handleScroll(e, `#${section}`)}
-              className={`w-full flex items-center justify-center transition-all duration-200
-          ${isActive
-                  ? "bg-accentTeal text-white font-bold h-12 text-sm"
-                  : "bg-gray-700 text-gray-300 hover:bg-accentTeal hover:text-white h-10 text-xs"
-                }`}
-            >
-              {section !== "about" ? "My " : ""}{section.charAt(0).toUpperCase() + section.slice(1)}{section === "about" && " Me"}
-            </a>
-          );
-        })}
+    <div className="App min-h-screen bg-background text-textPrimary">
+      {/* Top Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
+          <a href="#about" onClick={(e) => handleScroll(e, 'about')} className="text-lg font-bold text-textPrimary hover:text-accentTeal transition">
+            an
+          </a>
+          <div className="flex gap-1">
+            {navItems.map(({ id, label }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={(e) => handleScroll(e, id)}
+                className={`px-3 py-1.5 rounded-full text-sm transition-all duration-200
+                  ${activeSection === id
+                    ? "bg-accentTeal text-white font-semibold"
+                    : "text-textSecondary hover:text-textPrimary hover:bg-gray-100"
+                  }`}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
       </nav>
 
+      {/* Main Content */}
+      <main className="pt-16">
+        <About />
+        <Education />
+        <Skills />
+        <Experiences />
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-50 border-t border-gray-200 py-6 text-center text-sm text-textSecondary">
+        Avina Nakarmi &middot; {new Date().getFullYear()}
+      </footer>
     </div>
   );
 }
