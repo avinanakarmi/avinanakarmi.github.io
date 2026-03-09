@@ -49,6 +49,27 @@ const About = () => {
 						My research focuses on AI that reasons across representational modalities (text and charts) via semantic reasoning spaces where information connects meaningfully. The goal is to lay groundwork for participatory and communicative AI that challenges assumptions, not just extracts information, making AI a genuine partner in critical thinking rather than a tool that amplifies human cognitive limitations.
 						My knowledge of human-data interaction and information visualization shapes how I approach AI reasoning. Visualization is about making information meaningful to humans. AI reasoning should be grounded in how humans actually reason, shaped by community values and cultural context, not just patterns from training data. This perspective drives research toward AI systems that function as intellectual partners.
 					</p>
+					<p className="text-base text-textSecondary mt-3">
+						Advised by{" "}
+						<a
+							href="https://aedeegee.github.io/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-accentTeal hover:underline"
+						>
+							Dr. Aritra Dasgupta
+						</a>
+						{" "}at the{" "}
+						<a
+							href="https://niiv.njitvis.com/"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-accentTeal hover:underline"
+						>
+							NIIV Lab
+						</a>
+						, NJIT.
+					</p>
 				</div>
 			</div>
 		</section>

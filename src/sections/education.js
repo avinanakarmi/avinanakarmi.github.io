@@ -4,7 +4,7 @@ const educationData = [
 		school: "New Jersey Institute of Technology",
 		location: "Newark, NJ",
 		period: "Feb 2025 – Present",
-		detail: "Thesis (tentative): Semantic Reasoning Framework for Human-AI Collaboration",
+		detail: "Research direction: Semantic Reasoning Framework for Human-AI Collaboration",
 	},
 	{
 		degree: "B.S. in Computer Science & IT",
