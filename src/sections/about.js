@@ -1,6 +1,7 @@
 import GitHubIcon from "../icons/github";
 import LinkedInIcon from "../icons/linkedin";
 import MailIcon from "../icons/mail";
+import ScholarIcon from "../icons/scholar";
 
 const About = () => {
 	return (
@@ -39,6 +40,14 @@ const About = () => {
 							className="hover:text-accentTeal transition flex items-center gap-1"
 						>
 							<GitHubIcon /> GitHub
+						</a>
+						<a
+							href="https://scholar.google.com/citations?user=deAxRaEAAAAJ&hl=en"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:text-accentTeal transition flex items-center gap-1"
+						>
+							<ScholarIcon /> Google Scholar
 						</a>
 					</div>
 				</div>

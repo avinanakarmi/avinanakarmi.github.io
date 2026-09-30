@@ -2,6 +2,20 @@ const published = [
 	{
 		authors: [
 			{ name: "Nakarmi, A.", me: true },
+			{ name: "Battula, N. D. S." },
+			{ name: "Diaz, A." },
+			{ name: "Dasgupta, A." },
+		],
+		year: "2026",
+		title:
+			"Relevance Is Not Enough: A Communication-Oriented Retrieval System for Consequential Scientific Question Answering",
+		venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP) 2026 — Industry Track",
+		note: "arXiv preprint arXiv:2609.06222",
+		link: "https://arxiv.org/abs/2609.06222",
+	},
+	{
+		authors: [
+			{ name: "Nakarmi, A.", me: true },
 			{ name: "Sen, S." },
 			{ name: "Song, X." },
 			{ name: "Samaddar, S." },
@@ -50,18 +64,7 @@ const published = [
 // Flip to true to show the "Under Review" block again.
 const showUnderReview = false;
 
-const underReview = [
-	{
-		title:
-			"Relevance Is Enough: A Communication-Oriented Retrieval System for Consequential Scientific Question Answering",
-		authors:
-			"Avina Nakarmi, Naga Datha Saikiran Battula, Anthony Diaz, Aritra Dasgupta",
-		venue: "EMNLP 2026 Industry Track",
-		status: "Submitted 2026",
-		summary:
-			"Designed a persona-adaptive, reasoning-guided RAG system for scientific risk communication (water-quality domain) that cuts context use 10× while optimizing for human-centered “completeness,” a dimension standard relevance metrics fail to capture.",
-	},
-];
+const underReview = [];
 
 const Publications = () => {
 	return (

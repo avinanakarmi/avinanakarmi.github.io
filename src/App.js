@@ -4,7 +4,8 @@ import Highlights from './sections/highlights';
 import Education from './sections/education';
 import Teaching from './sections/teaching';
 import Publications from './sections/publications';
-import Skills from './sections/skills';
+// import Skills from './sections/skills'; // hidden: replaced by Research Focus
+import ResearchFocus from './sections/researchFocus';
 import Experiences from './sections/experiences';
 
 const navItems = [
@@ -12,7 +13,7 @@ const navItems = [
   { id: "education", label: "Education" },
   { id: "teaching", label: "Teaching" },
   { id: "publications", label: "Publications" },
-  { id: "skills", label: "Skills" },
+  { id: "research", label: "Research" },
   { id: "experiences", label: "Experience" },
   { id: "highlights", label: "Recent" },
 ];
@@ -83,7 +84,8 @@ const App = () => {
         <Education />
         <Teaching />
         <Publications />
-        <Skills />
+        <ResearchFocus />
+        {/* <Skills /> */}
         <Experiences />
         <Highlights />
       </main>

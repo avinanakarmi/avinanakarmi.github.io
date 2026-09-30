@@ -1,26 +1,26 @@
 const skillCategories = [
 	{
-		category: "AI System Design & Evaluation",
+		category: "LLMs & NLP",
 		skills:
-			"Reasoning-guided AI pipeline design, Evidence-grounded response generation, LLM evaluation and benchmarking, Evaluation harness development, RAG, Chain-of-Verification, Prompt engineering",
+			"Retrieval-augmented generation, Open-weight models via Hugging Face Transformers, LLM-as-a-judge evaluation, Chain-of-Verification, Prompt engineering, LangChain Framework",
 		color: "border-accentTeal",
 	},
 	{
-		category: "Multimodal AI & Human-AI Interaction",
+		category: "Multimodal AI & Visualization",
 		skills:
-			"Information visualization, Multimodal reasoning (text and visualization), Human-centered AI research methods, Multimodal LLMs (GPT, Gemini, Claude)",
+			"Chart question answering, Chart–caption reasoning, YOLO object detection, D3.js, Tableau, Matplotlib, Seaborn",
 		color: "border-accentLavender",
 	},
 	{
-		category: "Research Methods & Data Analysis",
+		category: "Research Methods & Statistics",
 		skills:
-			"Human-subject studies, Community-based participatory research, Qualitative thematic analysis, Statistical evaluation, Participatory design",
+			"Human-subject studies, Annotation design and inter-rater reliability (Cohen's κ), Participatory design / CBPR, Qualitative thematic analysis, Statistical evaluation (SciPy, statsmodels)",
 		color: "border-accentYellow",
 	},
 	{
-		category: "Programming, Data & Visualization",
+		category: "Engineering",
 		skills:
-			"Python, JavaScript, D3.js, Tableau, Matplotlib, Seaborn, SQL, Pandas, NumPy, scikit-learn, React / Next.js, React Native, FastAPI, PostgreSQL, Docker, Git",
+			"Python, Pandas, NumPy, scikit-learn, SQL / PostgreSQL, JavaScript, React, Node.js / Express, FastAPI, Docker / Docker Compose, Git, React Native, Next.js",
 		color: "border-accentTeal",
 	},
 ];

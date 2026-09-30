@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const badgeStyles = {
 	Award: "bg-accentYellow text-textPrimary",
 	Talk: "bg-accentTeal text-textPrimary",
@@ -13,6 +15,26 @@ const statusStyles = {
 
 const highlightsData = [
 	{
+		date: "Sep 2026",
+		type: "Talk",
+		title:
+			"AI as a Caring Neighbor: Shaping Collective Environmental Health Intelligence through Community Knowledge Ecosystems",
+		venue: "Collective Intelligence (CI) & HCOMP 2026",
+		embed: { src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7510646212136718336?collapsed=1", height: 628 },
+		note:
+			"My first conference talk, framing AI as a participant in a community knowledge ecosystem. Presenting to a deeply committed group of researchers — a single thread of collective intelligence spanning very different open questions — gave me fresh ideas to move the project forward.",
+	},
+	{
+		date: "2026",
+		type: "Paper",
+		status: "Accepted",
+		title:
+			"Relevance Is Not Enough: A Communication-Oriented Retrieval System for Consequential Scientific Question Answering",
+		venue: "EMNLP 2026 · Industry Track",
+		note:
+			"Accepted — a persona-adaptive, reasoning-guided RAG system for scientific risk communication that cuts context use 10× while optimizing for human-centered completeness, which standard relevance metrics fail to capture.",
+	},
+	{
 		date: "2026",
 		type: "Paper",
 		status: "Accepted",
@@ -23,16 +45,6 @@ const highlightsData = [
 			"Accepted and final submission uploaded — a typology for reasoning about whether a chart and its surrounding text actually cohere in science communication.",
 	},
 	{
-		date: "2026",
-		type: "Paper",
-		status: "Accepted",
-		title:
-			"AI as a Caring Neighbor: Shaping Collective Environmental Health Intelligence through Community Knowledge Ecosystems",
-		venue: "Collective Intelligence (CI) 2026 · Talks",
-		note:
-			"Accepted for a talk — framing AI as a participant in a community knowledge ecosystem, where environmental health intelligence is built collectively rather than delivered top-down.",
-	},
-	{
 		date: "Jul 2026",
 		type: "Talk",
 		status: "Published",
@@ -40,6 +52,7 @@ const highlightsData = [
 			"POINTERS at UZH Shared Task 2026: Reasoning Probes for Argumentation Mining in UN Resolutions",
 		venue:
 			"Workshop on Argument Mining and Reasoning, ACL 2026 · San Diego, CA",
+		embed: { src: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7482836633965342720?collapsed=1", height: 1618 },
 		note:
 			"My first major conference, presenting a staged pipeline that treats reconstructing UN resolutions as reasoning rather than classification — the week left me with a notebook full of challenged assumptions about how AI reasoning and visualization research are chasing the same questions from different angles.",
 	},
@@ -66,8 +79,18 @@ const highlightsData = [
 		type: "Award",
 		title: "Excellence in Teaching by a TA",
 		venue: "Ying Wu College of Computing, NJIT",
+		embed: { src: "https://www.linkedin.com/embed/feed/update/urn:li:share:7461200064204574720?collapsed=1", height: 883 },
 		note:
 			"Being a TA pushed me to explore new directions and deepened my own understanding in ways I didn't anticipate.",
+	},
+	{
+		date: "Mar 26, 2026",
+		type: "Poster",
+		title:
+			"Leap of fAIth: Operationalizing Equitable Information Sensemaking via Community-Centered and Participatory AI-driven Science Communication",
+		venue: "AI Exploration Day Student Showcase · NJIT",
+		note:
+			"Presented the Leap of fAIth work on community-centered, participatory AI for science communication, co-designed with community leaders, volunteers, and residents.",
 	},
 	{
 		date: "Dec 2025",
@@ -79,21 +102,13 @@ const highlightsData = [
 			"Presented a Claim–Evidence–Reasoning framework where a generator/validator pipeline of multimodal LLMs turns scientific chart captions and context into validated claims, supporting evidence, and reasoning strategies — motivated by the gap between what a chart shows and what its caption tells.",
 	},
 	{
-		date: "2025",
+		date: "Nov 25, 2025",
 		type: "Award",
 		title:
-			"Leap of fAIth: Operationalizing Equitable Information Sensemaking via Community-Centered and Participatory AI-driven Science",
-		venue: "GSA Research Day · 2nd Place",
+			"Leap of fAIth: Envisioning AI-Powered Citizen Science for Sustainable Healthy Communities",
+		venue: "NJIT Graduate Student Association (GSA) Research Day · 2nd Place",
 		note:
-			"A participatory, community-centered AI framework using a two-LLM pipeline to turn water-quality data into empathetic, trustworthy messaging for residents.",
-	},
-	{
-		date: "Spring 2025",
-		type: "Poster",
-		title: "Leap of fAIth — Equitable, Community-Centered AI-driven Science",
-		venue: "AI Exploration Day Student Showcase · NJIT",
-		note:
-			"An early showcase of the Leap of fAIth work on community-centered AI for science communication.",
+			"Won second place for envisioning a human-AI citizen science system, with community oversight, that turns Newark water-quality data into plain-language, multimodal insights residents can act on.",
 	},
 	{
 		date: "Apr 2025",
@@ -105,6 +120,35 @@ const highlightsData = [
 			"Studies how caption content and design features affect the interpretability of scientific charts, proposing a framework for clearer, more effective chart–caption pairs.",
 	},
 ];
+
+const LinkedInEmbed = ({ embed }) => {
+	const [open, setOpen] = useState(false);
+	return (
+		<div className="mt-3">
+			<button
+				type="button"
+				onClick={() => setOpen(!open)}
+				className="text-sm text-accentTeal font-medium hover:underline"
+			>
+				{open ? "Hide LinkedIn post" : "View LinkedIn post"}
+			</button>
+			{open && (
+				<div className="mt-3 max-w-full overflow-x-auto">
+					<iframe
+						src={embed.src}
+						height={embed.height}
+						width="504"
+						frameBorder="0"
+						allowFullScreen
+						title="Embedded LinkedIn post"
+						loading="lazy"
+						className="max-w-full"
+					/>
+				</div>
+			)}
+		</div>
+	);
+};
 
 const Highlights = () => {
 	return (
@@ -143,6 +187,7 @@ const Highlights = () => {
 							<p className="text-sm text-textSecondary mt-2 leading-relaxed">
 								{item.note}
 							</p>
+							{item.embed && <LinkedInEmbed embed={item.embed} />}
 						</li>
 					))}
 				</ol>
