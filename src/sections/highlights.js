@@ -32,7 +32,7 @@ const highlightsData = [
 			"Relevance Is Not Enough: A Communication-Oriented Retrieval System for Consequential Scientific Question Answering",
 		venue: "EMNLP 2026 · Industry Track",
 		note:
-			"Accepted — a persona-adaptive, reasoning-guided RAG system for scientific risk communication that cuts context use 10× while optimizing for human-centered completeness, which standard relevance metrics fail to capture.",
+			"Accepted — a persona-adaptive, reasoning-guided RAG system for scientific risk communication that cuts context use 25× while optimizing for human-centered completeness, which standard relevance metrics fail to capture.",
 	},
 	{
 		date: "2026",
@@ -46,7 +46,7 @@ const highlightsData = [
 	},
 	{
 		date: "Jul 2026",
-		type: "Talk",
+		type: "Poster",
 		status: "Published",
 		title:
 			"POINTERS at UZH Shared Task 2026: Reasoning Probes for Argumentation Mining in UN Resolutions",
@@ -67,9 +67,9 @@ const highlightsData = [
 	},
 	{
 		date: "Jun 2026",
-		type: "Poster",
+		type: "Talk",
 		title:
-			"Leap of fAIth: Operationalizing Equitable Information Sensemaking via Community-Centered and Participatory AI-driven Science",
+			"Leap of fAIth: Envisioning AI-Powered Scientific Communication for Sustainable Healthy Communities",
 		venue: "NJIT Science Symposium · Jun 4",
 		note:
 			"A symposium built around communities collaborating with academia — seeing our work through that lens showed me how much research changes when it is measured by real-world impact rather than in-lab experiments.",
@@ -81,13 +81,13 @@ const highlightsData = [
 		venue: "Ying Wu College of Computing, NJIT",
 		embed: { src: "https://www.linkedin.com/embed/feed/update/urn:li:share:7461200064204574720?collapsed=1", height: 883 },
 		note:
-			"Being a TA pushed me to explore new directions and deepened my own understanding in ways I didn't anticipate.",
+			"Recognized for teaching in DS-650 Data Visualization and DS-752 Human-AI Sensemaking: designing Tableau lectures on when and why to use a visualization, facilitating weekly PhD research discussions, and mentoring eight students on independent research projects, including a class project that became a CHI 2026 workshop paper. Teaching pushed me to explore new directions and deepened my own understanding in ways I didn't anticipate.",
 	},
 	{
 		date: "Mar 26, 2026",
 		type: "Poster",
 		title:
-			"Leap of fAIth: Operationalizing Equitable Information Sensemaking via Community-Centered and Participatory AI-driven Science Communication",
+			"Leap of fAIth: Operationalizing Equitable Information Sensemaking via Community-Centered and Participatory AI-driven Science",
 		venue: "AI Exploration Day Student Showcase · NJIT",
 		note:
 			"Presented the Leap of fAIth work on community-centered, participatory AI for science communication, co-designed with community leaders, volunteers, and residents.",
