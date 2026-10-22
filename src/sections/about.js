@@ -55,8 +55,10 @@ const About = () => {
 				{/* Research Focus */}
 				<div>
 					<p className="text-base text-textSecondary leading-relaxed text-justify">
-						My research focuses on AI that reasons across representational modalities (text and charts) via semantic reasoning spaces where information connects meaningfully. The goal is to lay groundwork for participatory and communicative AI that challenges assumptions, not just extracts information, making AI a genuine partner in critical thinking rather than a tool that amplifies human cognitive limitations.
-						My knowledge of human-data interaction and information visualization shapes how I approach AI reasoning. Visualization is about making information meaningful to humans. AI reasoning should be grounded in how humans actually reason, shaped by community values and cultural context, not just patterns from training data. This perspective drives research toward AI systems that function as intellectual partners.
+						My research is on multimodal semantic reasoning through human-AI collaboration. I study how evidence from text and visual representations, such as charts, captions and their surrounding context, connects to claims, and I use argumentation and reasoning strategies to judge whether that evidence is sufficient across the many aspects of a question. Rather than handing people a final verdict, I want AI to help them build a mental framework for reasoning about consequential and contested claims, making it a partner in critical thinking rather than a tool that amplifies our cognitive shortcuts.
+					</p>
+					<p className="text-base text-textSecondary leading-relaxed text-justify mt-3">
+						My background in human-data interaction and information visualization shapes this approach. Visualization is about making information meaningful to people, and I believe AI reasoning should be grounded the same way: in how people actually reason, and in the values and lived experience of the communities it serves.
 					</p>
 					<p className="text-base text-textSecondary mt-3">
 						Advised by{" "}

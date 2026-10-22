@@ -1,19 +1,27 @@
 const focusAreas = [
 	{
-		title: "Multimodal Reasoning over Charts and Text",
+		title: "Argumentation and Evidence Sufficiency",
 		description:
-			"How humans and AI reason across a chart, its caption, and surrounding context — and whether they actually cohere.",
+			"How reasoning strategies constrain the way evidence supports a claim, and when evidence is sufficient to reach a conclusion, uncertain, or genuinely contested.",
 		tools:
-			"Multimodal LLMs (GPT, Gemini, Claude), Sentence-Transformers, YOLO, D3.js, Tableau, Matplotlib, Seaborn, React, Node.js / Express, PostgreSQL, Docker",
+			"Argumentation theory, claim–evidence modeling, argument mining, multi-agent LLM pipelines, open-weight models, Sentence-Transformers",
 		color: "border-accentTeal",
 	},
 	{
-		title: "Communication-Oriented Retrieval and LLM Evaluation",
+		title: "Multimodal Reasoning over Charts and Text",
 		description:
-			"Retrieval and reasoning pipelines judged by what people need to understand, not only by relevance — and scrutiny of how LLMs are evaluated.",
+			"How humans and AI reason across a chart, its caption and surrounding context, whether these actually cohere, and which reasoning each one invites.",
+		tools:
+			"Multimodal LLMs (GPT, Gemini, Claude), Sentence-Transformers, YOLO, D3.js, Tableau, Matplotlib, Seaborn, React, Node.js / Express, PostgreSQL, Docker",
+		color: "border-accentLavender",
+	},
+	{
+		title: "Communication-Oriented Retrieval and Evaluating Reasoning",
+		description:
+			"Retrieval and reasoning pipelines judged by whether people get the complete answer they need, not just a relevant one, and scrutiny of whether LLM judges actually ground their verdicts in evidence.",
 		tools:
 			"RAG with Sentence-Transformers, open-weight models via Hugging Face Transformers, LLM-as-a-judge, Chain-of-Verification, OpenAI / Anthropic / Gemini APIs, Python, scikit-learn",
-		color: "border-accentLavender",
+		color: "border-accentTeal",
 	},
 	{
 		title: "Participatory, Human-Centered AI for Science Communication",

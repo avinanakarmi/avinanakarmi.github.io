@@ -10,10 +10,10 @@ import Experiences from './sections/experiences';
 
 const navItems = [
   { id: "about", label: "About" },
+  { id: "research", label: "Research" },
+  { id: "publications", label: "Publications" },
   { id: "education", label: "Education" },
   { id: "teaching", label: "Teaching" },
-  { id: "publications", label: "Publications" },
-  { id: "research", label: "Research" },
   { id: "experiences", label: "Experience" },
   { id: "highlights", label: "Recent" },
 ];
@@ -81,10 +81,10 @@ const App = () => {
       {/* Main Content */}
       <main className="pt-16">
         <About />
+        <ResearchFocus />
+        <Publications />
         <Education />
         <Teaching />
-        <Publications />
-        <ResearchFocus />
         {/* <Skills /> */}
         <Experiences />
         <Highlights />
