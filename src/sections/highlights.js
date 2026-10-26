@@ -15,6 +15,17 @@ const statusStyles = {
 
 const highlightsData = [
 	{
+		date: "Oct 2026",
+		type: "Poster",
+		status: "Presented (virtually)",
+		title:
+			"Relevance Is Not Enough: A Communication-Oriented Retrieval System for Consequential Scientific Question Answering",
+		venue: "EMNLP 2026 · Industry Track",
+		embed: { src: "https://www.linkedin.com/embed/feed/update/urn:li:activity:7519550882934558720?collapsed=1", height: 950 },
+		note:
+			"New variant to conference experience: presenting virtually.",
+	},
+	{
 		date: "Sep 2026",
 		type: "Talk",
 		title:
